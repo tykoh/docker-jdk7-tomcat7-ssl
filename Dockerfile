@@ -34,7 +34,7 @@ ADD apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 ## prepare apache2 ssl
 RUN a2enmod ssl
-RUN a2ensite default-ssl
+## RUN a2ensite default-ssl
 RUN a2enmod jk
 
 ADD workers.properties /etc/libapache2-mod-jk/workers.properties
