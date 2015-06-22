@@ -10,6 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install git
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install openjdk-7-jre-headless wget unzip vim
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install apache2 libapache2-mod-jk
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install supervisor
+RUN apt-get -y install uuid
 
 RUN mkdir -p /opt/tomcat
 RUN cd /opt/tomcat

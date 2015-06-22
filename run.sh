@@ -2,6 +2,12 @@
 
 VOLUME_HOME="/data"
 
+if [[ ! -f /.machine.uuid ]]; then
+	echo "=> First time running, preparing data."
+	echo `uuid` > /.machine.uuid
+	echo `cat /.machine.uuid`
+fi
+
 if [[ ! -d $VOLUME_HOME/html ]]; then
 	echo "=> Going to create and link html folder"
 	cp -R /var/www/html /data/
